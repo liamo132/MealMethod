@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', 'Montserrat', sans-serif;
+}
+
+body {
+    min-height: 200vh;
+}
+
+/*---------------HEADER AND BANNER------------------*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 1s;
+    padding: 18px 100px;
+    z-index: 100000;
+    background: #ececec;
+    box-shadow: none;
+    /* Initially no shadow */
+}
+
+
+
+
+.logo img {
+    max-height: 50px;
+    transition: opacity 0.6s;
+    display: block;
+    left: auto;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #31C48D;
+    letter-spacing: 2px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+header ul li a:hover {
+    background-color: #F0F8FF;
+    border-color: #31C48D;
+
+}
+
+/* Active link */
+header ul li a.active {
+    color: #fff;
+    background-color: #31C48D;
+    border-color: #31C48D;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Centering all navigation links */
+header ul {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+header.sticky {
+    padding: 12px 100px;
+    background: #ececec;
+    box-shadow: 0 4px 8px rgba(49, 196, 141, 0.5);
+}
+
+header.sticky ul li a {
+    color: #31C48D;
+}
+
+header.sticky ul li a.active {
+    color: #fff;
+}
+
+header.sticky .logo {
+    color: #31C48D;
+}
+
+header.sticky .logo img {
+    display: block;
+    opacity: 1;
+}
+
+
+/*---------------Profile Button ------------------*/
+/* style.css */
+.profile-sidebar {
+    position: fixed;
+    top: 73px; /* Adjusted to make space for the navbar */
+    right: -300px; /* Initially hidden */
+    width: 300px;
+    height: calc(100% - 60px); /* Adjusted to fit the remaining space */
+    background-color: #f2f2f2;
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.profile-sidebar h2 {
+    margin-bottom: 20px;
+    padding-top: 15px;
+    font-family: 'Montserrat';
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    
+}
+
+.profile-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    font-family: 'Rubrik';
+}
+
+.profile-sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.profile-sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #555;
+}
+
+
+
+
+
+/*---------------indewx page video ------------------*/
+
+
+.banner {
+    position: relative; /* Ensure the video covers the entire banner */
+    width: 100%;
+    height: 100vh; /* Adjust as needed */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire area */
+    border: none; /* Remove border */
+    opacity: 0.89;
+    filter: blur(0); /* Initially no blur */
+    transition:  0.8s; /* Smooth transition for the blur effect */
+}
+.paused .banner-video {
+    filter: blur(10px); /* Apply blur effect when paused */
+}
+.pause-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    color: #333; /* Dark text color */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pause-button:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly brighter when hovered */
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    color: #fff; /* Text color for welcoming message */
+    transition: 1.3s ; /* Smooth transition for showing/hiding */
+
+}
+
+.paused .banner-content {
+    background-color: #31C48D;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.banner-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.banner-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.banner-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #31C48D;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.banner-content .btn:hover {
+    background-color: #1f824d;
+}
+
+/*---------------index page "about us"  ------------------*/
+
+.about-us {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px 50px; /* Adjust padding to create more space from the sides */
+    background-color: #ececec;
+    min-height: 400px; /* Set a minimum height */
+    border-left: 20px solid #f8eeee; /* Add white border to the left */
+    border-right: 20px solid #f8eeee; /* Add white border to the right */
+    opacity: 0; /* Initially hide the content */
+    transition: opacity 0.5s ease-in-out; /* Add transition effect */
+}
+
+.about-us.show {
+    opacity: 1; /* Show the content */
+}
+.about-us-content {
+    background-color: #ececec;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.about-us-content h2 {
+    color: #333;
+    font-size: 36px;
+    font-family: 'Montserrat';
+    font-weight: 800;
+    letter-spacing: 2px;;
+    margin-bottom: 10px;
+    opacity: 0; /* Initially hide the heading */
+    animation: fadeIn 0.8s ease forwards; /* Apply fadeIn animation */
+    animation-delay: 0.5s; /* Delay the animation for 0.5s */
+    padding-left: 9px;
+}
+
+.about-us-content p {
+    color: #666;
+    font-size: 22px;
+    line-height: 1.6;
+    word-spacing: 0.8px;;
+    opacity: 0; /* Initially hide the paragraphs */
+    animation: fadeIn 0.8s ease forwards; /* Apply fadeIn animation */
+    animation-delay: 1.5s; /* Delay the animation for 1s */
+    font-family: 'Rubrik';
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+.image-carousel {
+    padding-top: 30px;;
+    display: flex;
+    overflow: hidden; /* Hide scrollbar */
+    cursor: pointer; /* Change cursor to pointer when hovering over carousel */
+    margin-right: 50px;
+    
+}
+
+
+.carousel-slide {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    border-radius: 10px;
+    overflow: hidden; /* Hide overflow to round corners */
+    opacity: 0; /* Initially hide the slide */
+    transform: translateY(100px); /* Initial translateY for slide animation */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Add transition effect */
+}
+
+.carousel-slide:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow on hover for visual feedback */
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    transition: transform 1s; /* Add smooth transition for image scaling */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.carousel-slide:hover img {
+    transform: scale(1.05); /* Scale up image on hover for visual effect */
+}
+
+.carousel-text {
+    position: absolute;
+    left:72%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+/*--------------- Footer Styling  ------------------*/
+.footer {
+    background-color: #31C48D; /* Change background color */
+    padding: 30px 0;
+    min-height: 300px;
+    position: relative; /* Add position relative */
+
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    flex: 1;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px); /* Initial position off-screen */
+    transition: opacity 6s ease, transform 3s ease; /* Transition both opacity and transform */
+}
+.footer-content.show {
+    opacity: 1;
+    transform: translateY(0); /* Move content back to its original position */
+}
+
+.footer-content h3 {
+    color: #ececec;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    margin-bottom: 15px; /* Increased margin */
+    letter-spacing: 1px; /* Increased letter spacing */
+}
+
+#email:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.footer-content p {
+    color: #666;
+    font-size: 22px; /* Increased font size */
+    font-weight: 500;
+    margin-bottom: 10px; /* Increased margin */
+    letter-spacing: 0.8px; /* Increased letter spacing */
+    font-family: 'Rubrik';
+    padding-top: 16px;
+}
+
+.footer-content img {
+    max-width: 200px; /* Adjust the maximum width as needed */
+    max-height: 200px; /* Adjust the maximum height as needed */
+    margin-bottom: 15px; /* Increased margin */
+}
+
+.social-icon {
+    color: #fff; /* Change social icon color */
+    font-size: 30px; /* Increased font size */
+    margin-right: 20px; /* Increased margin */
+}
+
+.social-icon :hover{
+    color: #666; /* Change social icon color */
+    font-size: 40px; /* Increased font size */
+    margin-right: 20px; /* Increased margin */
+    transition: 0.6s;
+}
+
+
+.bottom-bar {
+    background-color: #ececec;
+    color: #333;
+    text-align: center;
+    padding: 15px 0; /* Increased padding */
+    position: absolute; /* Set position to absolute */
+    bottom: 0; /* Align to the bottom */
+    left: 0;
+    width: 100%;
+}
+
+.bottom-bar p {
+    margin: 0;
+    letter-spacing: 1px; /* Increased letter spacing */
+}
+
+/*--------------- Search parameters recipe.html ------------------*/
+/* Search Section */
+.search-section {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-top: 80px; /* Adjust as needed */
+    border-bottom: 2px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-section select,
+.search-section input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    font-family: 'Rubrik';
+}
+
+.search-section select {
+    width: 150px;
+}
+
+.search-section input[type="text"] {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.search-section button {
+    padding: 10px 20px;
+    background-color: #31C48D;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-section button:hover {
+    background-color: #1f824d;
+}

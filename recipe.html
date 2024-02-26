@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>MealMethod</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon"  type="image/x-icon" href="img/favicon.ico" >
+</head>
+
+<body>
+    <!--- header ---->
+    <header>
+        <a href="#" class="logo"><img src="img/logo.png" alt="Logo"></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="" class="active" >Recipes</a></li>
+            <li><a href="">Meal Planner</a></li>
+            <li><a href="#" id="profileBtn"><i class="fas fa-user"></i> Profile</a></li>
+        </ul>
+    </header>
+
+        <!-- Profile Sidebar -->
+        <div id="profileSidebar" class="profile-sidebar">
+            <a href="#" class="close-btn" id="closeBtn">&times;</a>
+            <h2>Profile Options</h2>
+            <ul>
+                <li><a href="#">Profile Details</a></li>
+                <li><a href="#">Your Meal Plan</a></li>
+                <!-- Add more options here -->
+            </ul>
+        </div>
+
+<!--- search parameters -->
+<div class="search-section">
+    <select id="meal-type">
+        <option value="breakfast">Breakfast</option>
+        <option value="lunch">Lunch</option>
+        <option value="dinner">Dinner</option>
+    </select>
+    <input type="text" id="search-bar" placeholder="Search...">
+    <input type="text" id="ingredient-filter" placeholder="Include Ingredients...">
+    <button id="search-button">Search</button>
+</div>
+
+
+</body>
+<script src="java.js"></script>
+
+</html>

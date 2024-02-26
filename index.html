@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>MealMethod</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   
+    <link rel="icon"  type="image/x-icon" href="img/favicon.ico" >
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><img src="img/logo.png" alt="Logo"></a>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="recipe.html">Recipes</a></li>
+            <li><a href="">Meal Planner</a></li>
+
+        </ul>
+
+    </header>
+    <section class="banner">
+        <video autoplay loop muted playsinline class="banner-video">
+            <source src="mp4/cook.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="pause-button" onclick="toggleVideo()">Pause</button>
+        <div class="banner-content">
+            <h1>Welcome to Our Website!</h1>
+            <p>Discover our meal planner and start planning your delicious meals today.</p>
+            <a href="meal-planner.html" class="btn">Start Meal Planning</a>
+        </div>
+
+    </section>
+
+    <section class="about-us">
+        <div class="about-us-content">
+            <h2>About Us....</h2>
+            <p>At Meal Method, we believe that eating well should be enjoyable, convenient, and personalized.
+                We understand that maintaining a healthy lifestyle can be challenging in today's fast-paced world,
+                which is why we've created a solution to simplify the process of planning and preparing nutritious
+                meals.
+            </p>
+            <br>
+            <p>Meal Method is more than just a recipe platform - it's a comprehensive meal planning and discovery tool
+                designed to meet the diverse needs of our users.
+                Whether you're a busy professional looking for quick and easy meal ideas, a fitness enthusiast seeking
+                nutritious recipes to support your goals,
+                or someone with dietary restrictions navigating food choices, Meal Method has something for you.</p>
+            <br>
+            <p>Explore our <a href="recipes.html" style="color: #31C48D; text-decoration: underline;">recipes</a> and
+                <a href="planner.html" style="color: #31C48D; text-decoration: underline;">meal planner</a> and start
+                your journey towards a healthier lifestyle today!
+            </p>
+
+        </div>
+        <div class="image-carousel">
+            <a
+                href="https://www.tablespoon.com/recipes/copycat-kfc-original-style-chicken/97c93d14-9d8c-4bc7-96dc-1e0b37e4fcaa">
+                <div class="carousel-slide">
+                    <img src="img/food1.jpeg" alt="Meal of the Week 1">
+                </div>
+            </a>
+            <a href="https://cafedelites.com/crispy-buffalo-chicken-wings-baked/">
+                <div class="carousel-slide">
+                    <img src="img/food2.jpg" alt="Meal of the Week 2">
+                </div>
+            </a>
+            <a href="https://www.recipetineats.com/carbonara/">
+                <div class="carousel-slide">
+                    <img src="img/food3.jpg" alt="Meal of the Week 3">
+                </div>
+            </a>
+            <p class="carousel-text">Top Meals of the Week</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <p id="email">liamf.connell@gmail.com</p>
+                <p>Phone: +353 (83) 076 3406</p>
+            </div>
+            <div class="footer-content">
+                <img src="img/logo2.png" alt="">
+            </div>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>API Eduram</p>
+        </div>
+    </footer>
+
+
+
+</body>
+<script src="java.js"></script>
+
+</html>
