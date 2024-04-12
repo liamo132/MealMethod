@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>MealMethod</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><img src="img/logo.png" alt="Logo"></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipe.html">Recipes</a></li>
+            <li><a href="mealplanner.html">Meal Planner</a></li>
+            <li><a href="fitbuilder.html"  class="active">Fit Builder</a></li>
+        </ul>
+        <a href="account.html" class="profile-logo"><i class="fas fa-user"></i></a>
+
+    </header>
+
+    <div class="builder-container">
+        <div class="left-side">
+            <div class="box">
+                <h1>Fit Builder</h1>
+                <div class="content">
+                    <div class="input">
+                        <label for="height">Age</label>
+                        <input type="text" class="text-input" id="age" autocomplete="off" required />
+                    </div>
+
+                    <div class="gender">
+
+                        <label class="container">
+                            <input type="radio" name="radio" id="m">
+                            <p class="text">Male</p>
+                            <span class="checkmark"></span>
+                        </label>
+
+
+                        <label class="container">
+                            <input type="radio" name="radio" id="f">
+                            <p class="text"> Female</p>
+                            <span class="checkmark"></span>
+                        </label>
+
+                    </div>
+
+                    <div class="containerHW">
+                        <div class="inputH">
+                            <label for="height">Height(cm)</label>
+                            <input type="number" id="height" required>
+                        </div>
+
+                        <div class="inputW">
+                            <label for="weight">Weight(kg)</label>
+                            <input type="number" id="weight" required>
+                        </div>
+                    </div>
+
+
+                    <div class="input">
+                        <label for="goal">Goal:</label>
+                        <select id="goal" name="goal">
+                            <option value="lose">Lose Weight</option>
+                            <option value="gain">Gain Weight</option>
+                            <option value="build">Build Muscle</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="submit-button" onclick="calculate()">Submit</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="right-side">
+            <h1>Enter your details, <br> Get your Fit Build.</h1>
+            <div id="output">
+                <div class="result-section">
+                    <h3>BMI</h3>
+                    <p id="bmi"></p>
+                </div>
+                <div class="result-section">
+                    <h3>Health Note</h3>
+                    <p id="health-note"></p>
+                </div>
+                <div class="result-section">
+                    <p id="Nutritional-value"></p>
+                </div>
+                <div class="result-section" id="pie-section">
+                    <div id="pie-chart"></div>
+                </div>
+                <div class="result-section">
+                    <p id="builder-note"></p>
+                </div>
+            </div>
+        </div>
+
+</body>
+<script src="js/builder.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</html>

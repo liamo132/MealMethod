@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="icon"  type="image/x-icon" href="img/favicon.ico" >
+    
 </head>
 
 <body>
@@ -16,9 +17,10 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="" class="active" >Recipes</a></li>
-            <li><a href="">Meal Planner</a></li>
-            <li><a href="#" id="profileBtn"><i class="fas fa-user"></i> Profile</a></li>
+            <li><a href="mealplanner.html">Meal Planner</a></li>
+            <li><a href="fitbuilder.html">Fit Builder</a></li>
         </ul>
+        <a href="account.html" class="profile-logo"><i class="fas fa-user"></i></a>
     </header>
 
         <!-- Profile Sidebar -->
@@ -34,18 +36,38 @@
 
 <!--- search parameters -->
 <div class="search-section">
-    <select id="meal-type">
-        <option value="breakfast">Breakfast</option>
-        <option value="lunch">Lunch</option>
-        <option value="dinner">Dinner</option>
-    </select>
-    <input type="text" id="search-bar" placeholder="Search...">
-    <input type="text" id="ingredient-filter" placeholder="Include Ingredients...">
-    <button id="search-button">Search</button>
+    <h2> Want a meal ? Use our method.</h2>
+    <p> Use the search filters to find your perfect grub.</p>
+    <div class="search-form">
+        <input type="text" id="query" placeholder="Enter recipe keyword">
+        <select id="meal-type">
+            <option value="">Select Meal Type</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Brunch</option>
+            <option value="dinner">Dinner</option>
+        </select>
+        <select id="diet-type">
+            <option value="">Select Diet</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="vegan">Vegan</option>
+            <option value="gluten-free">Gluten-Free</option>
+            <option value="low-sugar">Low Sugar</option>
+            <option value="low-fat">Low Fat</option>
+            <option value="low-carb">Low Carb</option>
+            <option value="paleo">Paleo</option>
+            <option value="keto-friendly">Keto-Friendly</option>
+            <option value="mediterranean">Mediterranean</option>
+        </select>
+        
+    </div>
+    <button id="search-button" onclick="searchRecipes()">Search</button>
+</div>
+<div id="results" class="results-container">
+
 </div>
 
 
 </body>
-<script src="java.js"></script>
+<script src="js/recipejava.js"></script>
 
 </html>

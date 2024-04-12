@@ -8,11 +8,37 @@
     font-family: 'Rubik', 'Montserrat', sans-serif;
 }
 
-body {
-    min-height: 200vh;
+
+
+
+/*---------------SCROLLBAR------------------*/
+/* Width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
 }
 
-/*---------------HEADER AND BANNER------------------*/
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ececec;
+    /* Use the background color from your CSS */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #31C48D;
+    /* Use the color you want for the scrollbar handle */
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #1f824d;
+    /* Use a slightly different shade or color on hover */
+}
+
+
+/*------------------------------------------HEADER AND BANNER----------------------------------------------*/
 
 header {
     position: fixed;
@@ -30,14 +56,30 @@ header {
     /* Initially no shadow */
 }
 
-
-
-
 .logo img {
     max-height: 50px;
     transition: opacity 0.6s;
     display: block;
     left: auto;
+}
+
+.profile-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Adjust size of the circle */
+    height: 40px; /* Adjust size of the circle */
+    border: 2px solid #31C48D; /* Green border */
+    border-radius: 50%; /* Make it a circle */
+    margin-left: 20px; /* Adjust spacing */
+    color: #31C48D;
+    text-decoration: none;
+    font-size: 24px; /* Adjust icon size */
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.profile-logo:hover {
+    background-color: #F0F8FF; /* Light blue background on hover */
 }
 
 header ul {
@@ -112,70 +154,16 @@ header.sticky .logo img {
 }
 
 
-/*---------------Profile Button ------------------*/
-/* style.css */
-.profile-sidebar {
-    position: fixed;
-    top: 73px; /* Adjusted to make space for the navbar */
-    right: -300px; /* Initially hidden */
-    width: 300px;
-    height: calc(100% - 60px); /* Adjusted to fit the remaining space */
-    background-color: #f2f2f2;
-    padding: 20px;
-    transition: right 0.3s ease;
-    z-index: 1000; /* Ensure it's above other content */
-}
 
-.profile-sidebar h2 {
-    margin-bottom: 20px;
-    padding-top: 15px;
-    font-family: 'Montserrat';
-    font-size: 22px;
-    letter-spacing: 2px;
-    font-weight: 800;
-    
-}
-
-.profile-sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    font-family: 'Rubrik';
-}
-
-.profile-sidebar ul li {
-    margin-bottom: 10px;
-}
-
-.profile-sidebar ul li a {
-    text-decoration: none;
-    color: #333;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    color: #888;
-    cursor: pointer;
-}
-
-.close-btn:hover {
-    color: #555;
-}
-
-
-
-
-
-/*---------------indewx page video ------------------*/
-
+/*--------------------------------------------------- INDEX PAGE ---------------------------------------------------*/
 
 .banner {
-    position: relative; /* Ensure the video covers the entire banner */
+    position: relative;
+    /* Ensure the video covers the entire banner */
     width: 100%;
-    height: 100vh; /* Adjust as needed */
-    overflow: hidden; /* Hide any overflow */
+    height: 100vh;
+    overflow: hidden;
+    /* Hide any overflow */
 }
 
 .banner-video {
@@ -184,21 +172,25 @@ header.sticky .logo img {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the video covers the entire area */
-    border: none; /* Remove border */
+    object-fit: cover;
+    border: none;
+    /* Remove border */
     opacity: 0.89;
-    filter: blur(0); /* Initially no blur */
-    transition:  0.8s; /* Smooth transition for the blur effect */
+    filter: blur(0);
+    /* Initially no blur */
+    transition: 0.8s;
 }
+
 .paused .banner-video {
-    filter: blur(10px); /* Apply blur effect when paused */
+    filter: blur(10px);
 }
+
 .pause-button {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
-    color: #333; /* Dark text color */
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #333;
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
@@ -206,7 +198,7 @@ header.sticky .logo img {
 }
 
 .pause-button:hover {
-    background-color: rgba(255, 255, 255, 0.7); /* Slightly brighter when hovered */
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .banner-content {
@@ -216,9 +208,7 @@ header.sticky .logo img {
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 2;
-    color: #fff; /* Text color for welcoming message */
-    transition: 1.3s ; /* Smooth transition for showing/hiding */
-
+    color: #fff;
 }
 
 .paused .banner-content {
@@ -251,24 +241,30 @@ header.sticky .logo img {
     background-color: #1f824d;
 }
 
-/*---------------index page "about us"  ------------------*/
-
 .about-us {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
-    padding: 20px 50px; /* Adjust padding to create more space from the sides */
+    padding: 20px 50px;
+    /* Adjust padding to create more space from the sides */
     background-color: #ececec;
-    min-height: 400px; /* Set a minimum height */
-    border-left: 20px solid #f8eeee; /* Add white border to the left */
-    border-right: 20px solid #f8eeee; /* Add white border to the right */
-    opacity: 0; /* Initially hide the content */
-    transition: opacity 0.5s ease-in-out; /* Add transition effect */
+    min-height: 400px;
+    /* Set a minimum height */
+    border-left: 20px solid #f8eeee;
+    /* Add white border to the left */
+    border-right: 20px solid #f8eeee;
+    /* Add white border to the right */
+    opacity: 0;
+    /* Initially hide the content */
+    transition: opacity 0.5s ease-in-out;
+    /* Add transition effect */
 }
 
 .about-us.show {
-    opacity: 1; /* Show the content */
+    opacity: 1;
+    /* Show the content */
 }
+
 .about-us-content {
     background-color: #ececec;
     padding: 20px;
@@ -280,11 +276,15 @@ header.sticky .logo img {
     font-size: 36px;
     font-family: 'Montserrat';
     font-weight: 800;
-    letter-spacing: 2px;;
+    letter-spacing: 2px;
+    ;
     margin-bottom: 10px;
-    opacity: 0; /* Initially hide the heading */
-    animation: fadeIn 0.8s ease forwards; /* Apply fadeIn animation */
-    animation-delay: 0.5s; /* Delay the animation for 0.5s */
+    opacity: 0;
+    /* Initially hide the heading */
+    animation: fadeIn 0.8s ease forwards;
+    /* Apply fadeIn animation */
+    animation-delay: 0.5s;
+    /* Delay the animation for 0.5s */
     padding-left: 9px;
 }
 
@@ -292,10 +292,14 @@ header.sticky .logo img {
     color: #666;
     font-size: 22px;
     line-height: 1.6;
-    word-spacing: 0.8px;;
-    opacity: 0; /* Initially hide the paragraphs */
-    animation: fadeIn 0.8s ease forwards; /* Apply fadeIn animation */
-    animation-delay: 1.5s; /* Delay the animation for 1s */
+    word-spacing: 0.8px;
+    ;
+    opacity: 0;
+    /* Initially hide the paragraphs */
+    animation: fadeIn 0.8s ease forwards;
+    /* Apply fadeIn animation */
+    animation-delay: 1.5s;
+    /* Delay the animation for 1s */
     font-family: 'Rubrik';
 }
 
@@ -303,51 +307,59 @@ header.sticky .logo img {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
 }
 
-
-
 .image-carousel {
-    padding-top: 30px;;
+    padding-top: 30px;
+    ;
     display: flex;
-    overflow: hidden; /* Hide scrollbar */
-    cursor: pointer; /* Change cursor to pointer when hovering over carousel */
+    overflow: hidden;
+    /* Hide scrollbar */
+    cursor: pointer;
+    /* Change cursor to pointer when hovering over carousel */
     margin-right: 50px;
-    
-}
 
+}
 
 .carousel-slide {
     flex: 0 0 auto;
     margin-right: 10px;
     border-radius: 10px;
-    overflow: hidden; /* Hide overflow to round corners */
-    opacity: 0; /* Initially hide the slide */
-    transform: translateY(100px); /* Initial translateY for slide animation */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Add transition effect */
+    overflow: hidden;
+    /* Hide overflow to round corners */
+    opacity: 0;
+    /* Initially hide the slide */
+    transform: translateY(100px);
+    /* Initial translateY for slide animation */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Add transition effect */
 }
 
 .carousel-slide:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow on hover for visual feedback */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Add shadow on hover for visual feedback */
 }
 
 .carousel-slide img {
     width: 100%;
     height: auto;
-    transition: transform 1s; /* Add smooth transition for image scaling */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 1s;
+    /* Add smooth transition for image scaling */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-slide:hover img {
-    transform: scale(1.05); /* Scale up image on hover for visual effect */
+    transform: scale(1.05);
+    /* Scale up image on hover for visual effect */
 }
 
 .carousel-text {
     position: absolute;
-    left:72%;
+    left: 72%;
     transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.8);
     margin-bottom: 10px;
@@ -356,15 +368,13 @@ header.sticky .logo img {
     color: #333;
 }
 
-/*--------------- Footer Styling  ------------------*/
+/*--------------------------------------------------- Footer Styling ---------------------------------------------------*/
 .footer {
-    background-color: #31C48D; /* Change background color */
+    background-color: #31C48D;
     padding: 30px 0;
-    min-height: 300px;
-    position: relative; /* Add position relative */
-
+    min-height: 400px;
+    position: relative;
 }
-
 
 .container {
     display: flex;
@@ -376,12 +386,16 @@ header.sticky .logo img {
     flex: 1;
     text-align: center;
     opacity: 0;
-    transform: translateY(-20px); /* Initial position off-screen */
-    transition: opacity 6s ease, transform 3s ease; /* Transition both opacity and transform */
+    transform: translateY(-20px);
+    /* Initial position off-screen */
+    transition: opacity 6s ease, transform 3s ease;
+    /* Transition both opacity and transform */
 }
+
 .footer-content.show {
     opacity: 1;
-    transform: translateY(0); /* Move content back to its original position */
+    transform: translateY(0);
+    /* Move content back to its original position */
 }
 
 .footer-content h3 {
@@ -389,8 +403,9 @@ header.sticky .logo img {
     font-size: 24px;
     font-weight: bold;
     font-family: 'Montserrat';
-    margin-bottom: 15px; /* Increased margin */
-    letter-spacing: 1px; /* Increased letter spacing */
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+    /* Increased letter spacing */
 }
 
 #email:hover {
@@ -399,31 +414,32 @@ header.sticky .logo img {
 }
 
 .footer-content p {
-    color: #666;
-    font-size: 22px; /* Increased font size */
+    color: #fff;
+    font-size: 22px;
     font-weight: 500;
-    margin-bottom: 10px; /* Increased margin */
-    letter-spacing: 0.8px; /* Increased letter spacing */
+    margin-bottom: 10px;
+    letter-spacing: 0.8px;
     font-family: 'Rubrik';
     padding-top: 16px;
 }
 
 .footer-content img {
-    max-width: 200px; /* Adjust the maximum width as needed */
-    max-height: 200px; /* Adjust the maximum height as needed */
-    margin-bottom: 15px; /* Increased margin */
+    max-width: 200px;
+    max-height: 200px;
+    margin-bottom: 15px;
 }
 
 .social-icon {
-    color: #fff; /* Change social icon color */
-    font-size: 30px; /* Increased font size */
-    margin-right: 20px; /* Increased margin */
+    color: #fff;
+    /* change social icon color */
+    font-size: 30px;
+    margin-right: 20px;
 }
 
-.social-icon :hover{
-    color: #666; /* Change social icon color */
-    font-size: 40px; /* Increased font size */
-    margin-right: 20px; /* Increased margin */
+.social-icon :hover {
+    color: #666;
+    font-size: 40px;
+    margin-right: 20px;
     transition: 0.6s;
 }
 
@@ -432,57 +448,1779 @@ header.sticky .logo img {
     background-color: #ececec;
     color: #333;
     text-align: center;
-    padding: 15px 0; /* Increased padding */
-    position: absolute; /* Set position to absolute */
-    bottom: 0; /* Align to the bottom */
+    padding: 15px 0;
+    position: absolute;
+    bottom: 0;
+    /* Align to the bottom */
     left: 0;
     width: 100%;
 }
 
 .bottom-bar p {
     margin: 0;
-    letter-spacing: 1px; /* Increased letter spacing */
+    letter-spacing: 1px;
 }
 
-/*--------------- Search parameters recipe.html ------------------*/
-/* Search Section */
-.search-section {
-    background-color: #f2f2f2;
-    padding: 20px;
-    margin-top: 80px; /* Adjust as needed */
-    border-bottom: 2px solid #ddd;
+/*--------------------------------------------------- CONTACT PAGE ---------------------------------------------------*/
+
+#header2 {
+    text-align: center;
+    /* Center the content horizontally */
+}
+
+#header2 .logo {
+    margin: 0 auto;
+    /* Center the logo horizontally */
+}
+
+.form-container {
+    width: 70%;
+    max-width: 600px;
+    /* Maximum width to maintain readability */
+    background: linear-gradient(#ececec, #d8d7d7) padding-box,
+        linear-gradient(145deg, transparent 35%, #31C48D, #1f824d) border-box;
+    border: 2px solid transparent;
+    padding: 32px 24px;
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-family: 'Rubrik';
+    color: #31C48D;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background-size: 200% 100%;
+    animation: gradient 5s ease infinite;
+    margin: 170px auto;
+    /* Center the form */
+}
+
+
+.form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.form-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #31C48D;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.form-container .form-group input,
+.form-container .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #333;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #414141;
+    resize: none;
+}
+
+.form-container .form-group input::placeholder,
+.form-container .form-group textarea::placeholder {
+    opacity: 0.5;
+}
+
+.form-container .form-group input:focus,
+.form-container .form-group textarea:focus {
+    outline: none;
+    border-color: #31C48D;
+}
+
+.form-container .form-submit-btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+    font-family: inherit;
+    color: #ececec;
+    font-weight: 600;
+    width: 40%;
+    background: #31C48D;
+    border: 1px solid #31C48D;
+    padding: 12px 16px;
+    font-size: inherit;
+    gap: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.form-container .form-submit-btn:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: #313131;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+
+
+.navigation {
+    width: 200px;
+    background-color: #ececec;
+    height: 100%;
+    position: fixed;
+    top: 86px; /* Adjusted top position */
+    left: 0;
+    overflow-y: auto;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1); /* Add box shadow to the right */
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat';
+}
+
+.navigation li {
+    padding: 15px 20px; /* Increased padding for better spacing */
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s; /* Smooth transition on hover */
+   
+}
+
+.navigation .nav-item:hover {
+    background-color: #fff; /* Change the background color on hover */
+}
+
+.navigation li a {
+    text-decoration: none; /* Remove default underline */
+    color: #333; /* Text color */
+    display: block; /* Make the entire area clickable */
+    font-family: 'Montserrat';
+    font-weight: 600;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+}
+
+.navigation li.active {
+    background-color: #31C48D;
+    box-shadow: 5px 0 15px #31C48D; /* Add box shadow to the right */
+}
+
+.navigation li.active:hover {
+    background-color: #1f824d; /* Darker green color on hover */
+}
+
+.navigation .logout-button {
+    text-decoration: none;
+    color: white;
+    background-color: #FF5733; /* Red background color */
+    padding: 8px 16px; /* Decreased padding for smaller size */
+    border-radius: 5px; /* Border radius for rounded corners */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-top: 460px; /* Margin to separate it from the other links */
+    font-family: 'Montserrat'; /* Font family */
+    font-weight: bold; /* Bold font weight */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+    font-size: 12px; /* Adjusted font size for smaller text */
+    bottom: 40;
+}
+
+.navigation .logout-button:hover {
+    background-color: #fa0e0e; /* No change on hover */
+}
+
+.navigation .logout-button:hover span {
+    color: white; /* Keep the text color white on hover */
+}
+/* New CSS for Name Inputs */
+.name-inputs {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.name-inputs .input-wrapper {
+    flex: 0 0 48%; /* Adjust width as needed */
+} 
+
+p.profile-picture {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-bottom: 20px; /* Add margin for spacing */
+}
+
+.profile-picture-placeholder {
+    width: 70px; /* Adjust size as needed */
+    height: 70px; /* Adjust size as needed */
+    border-radius: 50%;
+    background-color: #ccc; /* Grey color */
+    display: flex;
+    justify-content: center;
     align-items: center;
+    overflow: hidden;
+    cursor: pointer; /* Add cursor on hover */
+    margin: auto; /* Center the circle */
 }
 
-.search-section select,
-.search-section input[type="text"] {
+.profile-picture-placeholder:hover {
+    background-color: #bbb; /* Change color on hover */
+}
+
+.profile-picture-placeholder i {
+    color: #fff; /* White color for the camera icon */
+    font-size: 20px; /* Adjust size as needed */
+}
+
+
+.content-section {
+    display: none; /* Hide all content sections initially */
+}
+
+/* Show active content section */
+.content-section.active {
+    display: block;
+} 
+
+.content {
+    padding: 50px 20px 20px; /* Adjusted padding */
+    background-color: #ffffff;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 85px;
+}
+
+/* Heading */
+.content h2 {
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    font-size: 36px;
+    padding: 30px 0;
+}
+
+
+#account-details{
+    height: 100vh;
+    padding-top: 80px;
+}
+
+#user-specifications{
+    height: 120vh;
+    padding-top: 130px;
+}
+/* Form */
+#accountDetailsForm {
+    width: 80%;
+    margin: auto;
+}
+
+/* Form labels */
+#accountDetailsForm label {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #31C48D;
+    margin-bottom: 20px;
+    text-align: left; /* Align labels to the left */
+}
+
+/* Form inputs */
+#accountDetailsForm input[type="file"],
+#accountDetailsForm input[type="text"],
+#accountDetailsForm input[type="email"],
+#accountDetailsForm input[type="password"],
+#accountDetailsForm textarea {
+    width: 100%;
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-right: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #31C48D;
+    outline: none;
+    font-size: 18px;
+    font-family: "Nunito", sans-serif;
+    text-align: center; /* Align inputs to the center */
+}
+
+#accountDetailsForm textarea {
+    height: 100px;
+}
+
+/* Submit button */
+#accountDetailsForm input[type="submit"] {
+    background-color: #31C48D;
+    border: none;
+    padding: 14px 48px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+    font-family: 'Rubik';
+}
+
+#accountDetailsForm input[type="date"]::placeholder {
+    color: rgba(0, 0, 0, 0.3); /* Adjust transparency */
+}
+#accountDetailsForm input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Form labels */
+#userSpecificationsForm label {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #31C48D;
+    margin-bottom: 20px;
+    text-align: left; /* Align labels to the left */
+}
+
+/* Form inputs */
+#userSpecificationsForm input[type="number"],
+#userSpecificationsForm select,
+#userSpecificationsForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #31C48D;
+    outline: none;
+    font-size: 18px;
+    font-family: "Nunito", sans-serif;
+    text-align: center; /* Align inputs to the center */
+}
+
+#userSpecificationsForm textarea {
+    height: 100px;
+}
+
+#userSpecificationsForm {
+    width: 80%;
+    margin: auto;
+}
+
+/* Form labels */
+#userSpecificationsForm label {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #31C48D;
+    margin-bottom: 20px;
+    text-align: left; /* Align labels to the left */
+}
+
+/* Form inputs wrapper */
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-group .input-wrapper {
+    flex: 0 0 48%; /* Adjust width as needed */
+}
+
+/* Form inputs */
+#userSpecificationsForm input[type="number"],
+#userSpecificationsForm select,
+#userSpecificationsForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #31C48D;
+    outline: none;
+    font-size: 18px;
+    font-family: "Nunito", sans-serif;
+    text-align: center; /* Align inputs to the center */
+}
+
+#userSpecificationsForm textarea {
+    height: 100px;
+}
+
+/* Submit button */
+#userSpecificationsForm input[type="submit"] {
+    background-color: #31C48D;
+    border: none;
+    padding: 14px 48px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+    font-family: 'Rubik';
+    margin-bottom: 30px;
+}
+
+#userSpecificationsForm input[type="submit"]:hover {
+    background-color: #45a049;
+}
+.meal-plans-box {
+    background-color: #ececec;
+    padding: 30px;
+    margin: auto; /* Center horizontally */
+    border-radius: 12px;
+    height: 700px;
+    width: 100%; /* Set to 100% to ensure it fills the parent container */
+    max-width: 1600px; /* Adjust as needed */
+    border: 2px solid;
+    border-color: #31C48D;
+    animation: border-animation 2s infinite alternate; /* Animation for border color */
+    margin-bottom: 35px;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    justify-content: space-around; /* Center items horizontally */
+}
+
+.meal-plan {
+    width: 90%; /* Take 90% of the width */
+    background-color: #fff; /* Background color */
+    padding: 20px; /* Add padding */
+    border-radius: 12px; /* Add border radius */
+    height: 65px;
+    border: 2px solid;
+    border-color: #31C48D;
+}
+
+.meal-name {
+    font-size: 18px;
+    color: #333;
+}
+
+.meal-name i {
+    margin-right: 10px; /* Add space between icon and text */
+}
+
+@keyframes border-animation {
+    0% {
+        border-color: #31C48D;
+    }
+    100% {
+        border-color: #1f824d; /* Darker green color */
+    }
+}
+
+@keyframes border-animation {
+    0% {
+        border-color: #31C48D;
+    }
+    100% {
+        border-color: #1f824d; /* Darker green color */
+    }
+}
+
+/*---------------------------------------------------RECIPE SEATCH INDEX SYTLING---------------------------------------------------*/
+
+
+.search-section {
+    margin-top: 110px;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.search-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat';
+    letter-spacing: 0.8px;
+    font-weight: bold;
+    color: #31C48D;
+}
+
+.search-section p {
+    font-family: 'Rubik', sans-serif;
+    /* Change font family */
+    color: #31C48D;
+    /* Change text color */
+    font-weight: bold;
+    font-size: 16px;
+    /* Adjust font size */
+    margin-bottom: 10px;
+    /* Add some bottom margin for spacing */
+}
+
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.search-form input,
+.search-form select {
+    margin: 5px;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 2px solid #31C48D;
+    border-radius: 1rem;
+    text-align: center;
     font-family: 'Rubrik';
+    color: #666;
+    cursor: pointer;
+
 }
 
-.search-section select {
-    width: 150px;
-}
 
-.search-section input[type="text"] {
-    flex: 1;
-    margin-right: 10px;
-}
-
-.search-section button {
-    padding: 10px 20px;
+#search-button {
+    padding: 8px 20px;
+    font-size: 16px;
     background-color: #31C48D;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.search-section button:hover {
+#search-button:hover {
     background-color: #1f824d;
 }
+
+#results {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.results-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.recipe-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    /* Rounded corners only at the top */
+}
+
+.recipe-card-content {
+    padding: 20px;
+}
+
+.recipe-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.recipe-card p {
+    margin-bottom: 10px;
+    color: #666666;
+}
+
+.recipe-card a {
+    color: #31C48D;
+    text-decoration: none;
+}
+
+.recipe-card a:hover {
+    text-decoration: underline;
+}
+
+
+
+/*--------------------------------------------------- MEAL PLANNER ---------------------------------------------------*/
+
+.secondary-header {
+    background-color: #fff;
+    padding: 15px;
+    /* Increased padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 85px;
+    /* Adjust this value as needed */
+    width: 100%;
+
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    /* Add box shadow */
+}
+
+.secondary-header .logo {
+    display: none;
+    /* Hide the logo in the secondary header */
+}
+
+.secondary-header ul {
+    display: none;
+    /* Hide the menu in the secondary header */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    /* Align buttons vertically */
+    margin-left: 340px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    /* Align buttons vertically */
+    margin-right: 340px;
+}
+
+.undoBtn,
+.redoBtn,
+.clearBtn,
+.saveBtn {
+    background-color: #ddd;
+    /* Light gray background */
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 14px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    padding: 8px 12px;
+    /* Add padding */
+    border-radius: 5px;
+    /* Add border radius */
+}
+
+.undoBtn:hover,
+.redoBtn:hover,
+.clearBtn:hover,
+.saveBtn:hover {
+    background-color: #ccc;
+    /* Darker gray background on hover */
+}
+
+
+.undoBtn,
+.redoBtn {
+    color: #31C48D;
+    border: 1px;
+    /* Remove default border */
+    border-radius: 6px;
+    padding: 8px 16px;
+    position: relative;
+    /* Position for pseudo-element */
+}
+
+.undoBtn::before,
+.redoBtn::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 6px;
+    background-image: linear-gradient(#ececec, #d8d7d7), linear-gradient(145deg, transparent 35%, #31C48D, #1f824d);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+    background-size: 200% 100%;
+    background-position: 0 0, 100% 0;
+    z-index: -1;
+    /* Ensure the pseudo-element is behind the content */
+    transition: background-position 0.3s ease;
+}
+
+.undoBtn:hover::before,
+.redoBtn:hover::before {
+    background-position: 100% 0, 0 0;
+}
+
+.clearBtn {
+    background-color: rgb(231, 85, 85);
+    /* Light gray background */
+    color: #ececec;
+    /* Gray text color */
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 14px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    padding: 8px 12px;
+    /* Add padding */
+    border-radius: 5px;
+    /* Add border radius */
+    display: flex;
+    /* Make it a flex container */
+    align-items: center;
+    /* Center icon vertically */
+}
+
+.clearBtn:hover {
+    background-color: #ee1e1e;
+    /* Darker gray background on hover */
+}
+
+.clearBtn i {
+    margin-right: 5px;
+    /* Add spacing between icon and text */
+}
+
+.saveBtn {
+    background-color: #31C48D;
+    /* Green background */
+    color: #ececec;
+    /* Light gray text color */
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 14px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    padding: 8px 12px;
+    /* Add padding */
+    border-radius: 5px;
+    /* Add border radius */
+    display: flex;
+    /* Make it a flex container */
+    align-items: center;
+    /* Center icon vertically */
+}
+
+.saveBtn:hover {
+    background-color: #1f824d;
+    /* Darker green background on hover */
+}
+
+.saveBtn i {
+    margin-right: 5px;
+    /* Add spacing between icon and text */
+}
+
+.header-middle input {
+    padding: 10px;
+    /* Increased padding */
+    border: none;
+    /* Removed border */
+    border-radius: 5px;
+    width: 300px;
+    /* Increased width */
+    transition: all 0.3s;
+    /* Added transition for smooth effect */
+}
+
+.header-middle input:focus {
+    outline: none;
+    border: 1px solid #ccc;
+    /* Add border when input is focused */
+    width: 350px;
+    /* Increase width on focus */
+}
+
+
+.header-middle input {
+    padding: 10px;
+    /* Increased padding */
+    border: none;
+    /* Removed border */
+    border-radius: 5px;
+    width: 300px;
+    /* Increased width */
+    transition: all 0.5s;
+    /* Added transition for smooth effect */
+    text-align: center;
+    /* Center the text */
+}
+
+.header-middle input:focus {
+    outline: none;
+    border: 1px solid #ccc;
+    /* Add border when input is focused */
+    width: 350px;
+    /* Increase width on focus */
+}
+
+.header-middle input::placeholder {
+    text-align: center;
+    /* Center the placeholder text */
+}
+
+.header-middle input {
+    text-align: center;
+    /* Center the text entered by the user */
+}
+
+.hover-pointer:hover {
+    cursor: pointer;
+}
+
+/* Add hover pointer for all day buttons */
+.day:hover {
+    cursor: pointer;
+}
+
+
+.meal-planner {
+    background-color: #ececec;
+    margin-top: 90px;
+    padding-bottom: 20px;
+    padding-top: 4px;
+    padding-left: 260px;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1.6px;
+}
+
+.days-container {
+    margin-left: 340px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 116px;
+}
+
+.day {
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-right: 10px;
+    opacity: .5;
+    transition: opacity 0.8s ease;
+    /* Smooth transition for opacity */
+}
+
+.day.active {
+    opacity: 1;
+}
+
+.day.selected {
+    background-color: #ffd700;
+}
+
+.add-meal-section {
+    background-color: #ececec;
+    padding: 20px;
+    height: 650px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.meal-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    width: 60%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(49, 196, 141, 0.3);
+    transition: box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.add-meal-button {
+    background-color: transparent;
+    color: #31C48D;
+    border: 2px solid #31C48D;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.add-meal-button:hover {
+    background-color: rgba(49, 196, 141, 0.1);
+}
+
+.add-meal-button i {
+    margin-right: 5px;
+    color: #31C48D;
+    font-size: 11px;
+}
+
+.add-meal-button-custom i {
+    font-size: 8px;
+}
+
+
+#mealSidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: width 0.5s, box-shadow 0.5s;
+    padding-top: 60px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 150px;
+}
+
+#mealSidebar .meal-options {
+    margin-top: 20px;
+}
+
+#mealSidebar .meal-option {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+#recipesContainer {
+    margin-top: 20px;
+}
+
+#recipesContainer .recipe-card {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#recipesContainer .recipe-image img {
+    width: 75px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+#recipesContainer .recipe-details {
+    flex-grow: 1;
+}
+
+#recipesContainer .recipe-details h4 {
+    margin-top: 0;
+}
+
+#recipesContainer .recipe-details p {
+    margin: 5px 0;
+}
+
+
+.meal-sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: width 0.5s, box-shadow 0.5s;
+    padding-top: 60px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 150px;
+}
+
+.lighter-color {
+    color: #999;
+}
+
+.meal-sidebar.open {
+    width: 500px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.meal-sidebar .choose-meals {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.meal-sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.meal-sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.meal-sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+    margin-right: 50px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+.start-planning-text {
+    text-align: center;
+    margin-bottom: 18px;
+    color: #31C48D;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Montserrat';
+    animation: text-fade-in 0.8s ease-out;
+}
+
+@keyframes text-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#main {
+    transition: margin-right .5s;
+    padding: 16px;
+    margin-right: 0;
+}
+
+@media screen and (max-height: 450px) {
+    .meal-sidebar {
+        padding-top: 15px;
+    }
+
+    .meal-sidebar a {
+        font-size: 18px;
+    }
+}
+
+.meal-options {
+    display: flex;
+    justify-content: center;
+}
+
+.meal-option {
+    padding: 10px 20px;
+    margin: 0 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: color 0.3s, border-bottom-color 0.3s;
+    position: relative;
+}
+
+.meal-option:hover {
+    color: #31C48D;
+}
+
+.meal-option:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.meal-option.selected {
+    color: #31C48D;
+}
+
+.meal-option.selected:before {
+    width: 100%;
+    background-color: #31C48D;
+}
+
+.closebtn {
+    color: #31C48D;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+
+}
+
+.closebtn:hover {
+    transform: scale(1.1);
+    /* Add slight scaling effect on hover */
+    color: #31C48D;
+    /* Ensure the color remains green on hover */
+}
+
+/* Style for the meal divs inside the meal container */
+.meal {
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style for the active meal option */
+.meal.active {
+    background-color: #31C48D;
+    color: #fff;
+    cursor: pointer;
+}
+
+.add-button {
+    background-color: #31C48D;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: #1f824d;
+}
+
+.breakfast-meal {
+    background-color: #FFE57F;
+    /* Yellow background for breakfast */
+    color: #333;
+    /* Text color for breakfast */
+}
+
+.lunch-meal {
+    background-color: #7FB3D5;
+    /* Blue background for lunch */
+    color: #fff;
+    /* Text color for lunch */
+}
+
+.dinner-meal {
+    background-color: #FFB6C1;
+    /* Pink background for dinner */
+    color: #fff;
+    /* Text color for dinner */
+}
+
+.smallerBTN {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    width: 90%;
+    /* Adjust as needed */
+    transition: bottom 0.5s ease;
+    /* Add transition effect */
+}
+
+.smaller-add-meal-button {
+    background-color: #31C48D;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    /* Adjust as needed */
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.totNutrition {
+    position: absolute;
+    bottom: 80px;
+    left: 460px;
+    width: 50%;
+    padding: 10px;
+    /* Adjust padding as needed */
+    background-color: #ececec;
+    border: 2px solid #31C48D;
+    /* Add a border */
+    border-radius: 10px;
+    /* Add rounded corners */
+    box-shadow: 0 2px 4px rgba(240, 236, 236, 0.801);
+    /* Add a shadow for depth */
+    transition: width 0.5s ease;
+    /* Add transition effect for width */
+    text-align: center;
+    /* Center-align the text */
+}
+
+.totNutrition p {
+    margin: 0;
+    /* Remove default margin */
+    font-size: 24px;
+    /* Adjust font size */
+    font-weight: 600;
+    color: #111;
+    /* Set text color */
+    font-family: 'Montserrat';
+    letter-spacing: .8px;
+    color: #31C48D;
+    text-align: center;
+    /* Center-align the text */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .totNutrition {
+        width: 80%;
+        /* Adjust width for smaller screens */
+        left: 10%;
+        /* Adjust left position for center alignment */
+    }
+}
+
+.mealCount {
+    position: absolute;
+    bottom: 20px;
+    /* Adjust position as needed */
+    left: 400px;
+    /* Adjust position as needed */
+    font-size: 18px;
+    /* Adjust font size */
+    color: #111;
+    /* Set text color */
+    font-family: 'Montserrat';
+}
+
+.mealCount p {
+    margin: 0;
+    /* Remove default margin */
+    font-family: 'Rubrik';
+}
+
+.mealCount span {
+    font-weight: bold;
+    color: #31C48D;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .mealCount {
+        left: 10%;
+        /* Adjust position for center alignment */
+    }
+}
+
+.recipe-details {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 90px;
+    width: 90%;
+}
+
+.recipe-details img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.recipe-details .recipe-info {
+    flex-grow: 1;
+    /* Take up remaining space */
+    margin-right: 20px;
+    /* Space between image and info */
+}
+
+.recipe-details h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.recipe-details p {
+    margin: 5px 0;
+    color: #31C48D;
+}
+
+.recipe-details .delete-button {
+    margin-left: auto;
+    /* Push the button to the right */
+}
+
+.delete-button {
+    background-color: #1f824d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    height: 45px;
+    margin: auto;
+    transition: transform 0.3s ease;
+    /* Add transition for the shake effect */
+}
+
+/* Add hover effect */
+.delete-button:hover {
+    transform: translateX(-2px);
+    /* Apply a small shake effect on hover */
+    background-color: #31C48D;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .meal-container {
+        width: 90%;
+        /* Adjusted width for smaller screens */
+    }
+
+    .totNutrition {
+        width: 40%;
+        /* Adjusted width for smaller screens */
+    }
+}
+
+/* Media query for even smaller screens */
+@media screen and (max-width: 480px) {
+    .meal-container {
+        width: 95%;
+        /* Further adjust width for very small screens */
+    }
+
+    .totNutrition {
+        width: 30%;
+        /* Adjusted width for very small screens */
+    }
+}
+
+
+
+/*--------------------------------------------------- FIT BUILDER ---------------------------------------------------*/
+/* Existing CSS */
+
+.builder-container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-side {
+    flex: 0 0 60%;
+    padding: 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+
+.left-side form {
+    width: 60%;
+}
+
+.left-side label,
+.left-side input,
+.left-side select {
+    width: 100%; /* Adjusted width */
+    margin-bottom: 15px;
+}
+
+.left-side h3 {
+    margin-bottom: 160px;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Montserrat';
+    color: #31C48D;
+}
+
+
+.box {
+    width: 500px;
+    background: #fafafa;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 2px 2px 20px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+
+}
+
+.builder-container h1 {
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    font-size: 36px;
+    margin-top: 5px;
+
+}
+
+.content {
+    padding: 0 30px;
+}
+
+.input {
+    background: #fff;
+    box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.input label {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #31C48D;
+    margin-bottom: 20px;
+}
+.gender .text {
+    color: #31C48D; /* Change text color to forest green */
+    margin: none;
+}
+
+.input input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #31C48D;
+    width: 50%;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Nunito", sans-serif;
+}
+
+.inputW {
+    background: #fff;
+    box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.inputW label {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #31C48D;
+    margin-bottom: 20px;
+}
+
+.inputW input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #31C48D;
+    width: 50%;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Nunito", sans-serif;
+}
+
+.inputH {
+    background: #fff;
+    box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+
+.inputH label {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #31C48D;
+    margin-bottom: 20px;
+}
+
+.inputH input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #31C48D;
+    width: 50%;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Nunito", sans-serif;
+}
+.gender {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    background: #fff;
+    box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+/* Style for Radio */
+.gender .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-top: 7px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.gender .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.gender .container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.gender .container input:checked~.checkmark {
+    background-color: #31C48D;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.gender .container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.gender .container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+
+
+.containerHW {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+
+
+@media (max-width: 700px) {
+    .box {
+        width: 380px;
+    }
+
+    .input label {
+        font-size: 18px;
+    }
+
+    .inputH label,
+    .inputW label {
+        font-size: 14px;
+    }
+
+    .input input,
+    .inputH input,
+    .inputW input {
+        font-size: 24px;
+    }
+
+    .modal-content {
+        width: 380px;
+    }
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style the select element */
+.input select {
+    padding: 10px;
+    border: 2px solid #31C48D; /* Improved border */
+    border-radius: 5px;
+    width: 80%;
+    font-size: 16px;
+    background-color: #fff;
+    appearance: none; /* Removes default arrow icon */
+    outline: none; /* Removes outline when focused */
+}
+
+/* Adjust appearance for better alignment */
+.input select option {
+    padding: 10px;
+}
+
+/* Hover effect */
+.input select:hover {
+    border-color: #3158a3; /* Darker border color on hover */
+}
+
+.input select option {
+    margin-left: 12px;
+}
+
+.submit-button {
+    background-color: #31C48D;
+    border: none;
+    padding: 14px 48px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+    font-family: 'Rubik';
+    margin-bottom: 8px;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+.right-side {
+    margin-top: 80px;
+    flex: 1;
+    padding: 20px;
+    background-color: #ececec;
+    transition: background-color 0.5s ease;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#output {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+}
+
+
+
+#pie-chart canvas {
+    max-width: 180px; /* Adjust maximum width of the canvas */
+    max-height: 180px; /* Adjust maximum height of the canvas */
+}
+
+.result-section {
+    opacity: 0; /* Initially hide all result sections */
+    transition: opacity 0.5s ease; /* Apply transition effect */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.result-section.show {
+    opacity: 1; /* Show the result section */
+}
+
+
+.right-side h1 {
+    margin-bottom: 10px;
+}
+.result-section h3 {
+    margin-bottom: 5px;
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-weight: 600;
+    color: #31C48D;
+    margin-bottom: 18px;
+}
+
+.result-section p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+

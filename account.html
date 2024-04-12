@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>MealMethod</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+
+<body>
+    <!--- header ---->
+    <header id="header2">
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="Logo"></a>
+    </header>
+
+    <div class="navigation">
+        <ul>
+            <li class="active" onclick="setActive(this); showSection('account-details');"><a href="#account-details">Account Details</a></li>
+            <li onclick="setActive(this); showSection('user-specifications');"><a href="#user-specifications">User Specifications</a></li>
+            <li onclick="setActive(this); showSection('meal-plans');"><a href="#meal-plans">Meal Plans</a></li>
+        </ul>
+        <ul> 
+            <li><a href="#" class="logout-button" onclick="logout()">Logout</a></li>
+        </ul>
+        
+    </div>
+
+    <div class="content" id="account-details">
+        <h2>Account Details</h2>
+        <form id="accountDetailsForm">
+            <label for="profilePicture" class="profile-picture">
+                <div class="profile-picture-placeholder">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <input type="file" id="profilePicture" name="profilePicture" style="display: none;">
+            </label>
+
+            <div class="name-inputs">
+                <div class="input-wrapper">
+                    <label for="firstName">First Name:</label><br>
+                    <input type="text" id="firstName" name="firstName">
+                </div>
+                <div class="input-wrapper">
+                    <label for="lastName">Last Name:</label><br>
+                    <input type="text" id="lastName" name="lastName">
+                </div>
+            </div>
+
+            <label for="dob">Date of Birth:</label><br>
+            <input type="text" id="dob" name="dob" placeholder="DD/MM/YYYY"><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br>
+
+
+            <input type="submit" value="Save Changes">
+        </form>
+    </div>
+
+    <div class="content" id="user-specifications">
+        <h2>User Specifications</h2>
+        <form id="userSpecificationsForm">
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <label for="height">Height (cm):</label>
+                    <input type="number" id="height" name="height">
+                </div>
+                <div class="input-wrapper">
+                    <label for="weight">Weight (kg):</label>
+                    <input type="number" id="weight" name="weight">
+                </div>
+            </div>
+
+            <div class="input-wrapper">
+                <label for="sex">Sex:</label>
+                <select id="sex" name="sex">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+    
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <label for="calorie">Calorie Intake:</label>
+                    <input type="number" id="calorie" name="calorie">
+                </div>
+                <div class="input-wrapper">
+                    <label for="protein">Protein Intake:</label>
+                    <input type="number" id="protein" name="protein">
+                </div>
+            </div>
+    
+            <label for="mealMethodBio">Meal Method Bio:</label>
+            <textarea id="mealMethodBio" name="mealMethodBio"></textarea><br>
+    
+            <input type="submit" value="Save Changes">
+        </form>
+    </div>
+
+    <div class="content" id="meal-plans">
+        <h2>Meal Plans</h2>
+        <div class="meal-plans-box">
+            <div class="meal-plan">
+
+                <p class="meal-name" ><i class="fas fa-image"></i> Meal Plan 1</p>
+            </div>
+
+            
+        </div>
+    </div>
+</body>
+<script src="js/account.js"></script>
+</html>

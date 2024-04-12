@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>MealMethod</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+
+<body>
+    <!-- Sliding Menu Section -->
+    <section class="meal-sidebar" id="mealSidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMealSidebar()">×</a>
+        <h3 style="text-align: center; border-bottom: 2px solid #ccc; padding-bottom: 10px; color: #31C48D;">Choose Meal
+        </h3>
+
+        <div class="meal-options">
+            <div class="meal-option" onclick="selectMeal(this, 'Breakfast')">Breakfast</div>
+            <div class="meal-option" onclick="selectMeal(this, 'Lunch')">Lunch</div>
+            <div class="meal-option" onclick="selectMeal(this, 'Dinner')">Dinner</div>
+        </div>
+        <div id="recipesContainer" style="margin-top: 20px;"></div>
+    </section>
+    <header>
+        <a href="#" class="logo"><img src="img/logo.png" alt="Logo"></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipe.html">Recipes</a></li>
+            <li><a href="mealplanner.html" class="active">Meal Planner</a></li>
+            <li><a href="fitbuilder.html">Fit Builder</a></li>
+        </ul>
+        <a href="account.html" class="profile-logo"><i class="fas fa-user"></i></a>
+    </header>
+    <header class="secondary-header">
+        <div class="header-left">
+            <button onclick="undo()" class="undoBtn"><i class="fas fa-undo" style="color: #31C48D;"></i> Undo</button>
+            <button onclick="redo()" class="redoBtn"><i class="fas fa-redo" style="color: #31C48D;"></i> Redo</button>
+        </div>
+        <div class="header-middle">
+            <input type="text" id="mealPlannerName" placeholder="Untitled">
+        </div>
+        <div class="header-right">
+            <button onclick="clearMealPlanner()" class="clearBtn"><i class="fas fa-trash" style="color: #ececec;"></i>
+                Clear</button>
+            <button onclick="saveMealPlanner()" class="saveBtn"><i class="fas fa-save" style="color: #ececec;"></i>
+                Save</button>
+        </div>
+    </header>
+    <section class="meal-planner">
+        <div class="days-container">
+            <!-- Include all 7 days initially -->
+            <div class="day active" onclick="toggleActive(this)">Day 1</div>
+            <div class="day" onclick="toggleActive(this)">Day 2</div>
+            <div class="day" onclick="toggleActive(this)">Day 3</div>
+            <div class="day" onclick="toggleActive(this)">Day 4</div>
+            <div class="day" onclick="toggleActive(this)">Day 5</div>
+            <div class="day" onclick="toggleActive(this)">Day 6</div>
+            <div class="day" onclick="toggleActive(this)">Day 7</div>
+        </div>
+    </section>
+    <section class="add-meal-section">
+        <div class="meal-container">
+            <div class="start-planning-text">Your planner looks a little empty...</div>
+            <!-- Add meals button -->
+            <button class="add-meal-button" onclick="openMealSidebar()">Add meals</button>
+    
+            <!-- added meals go here -->
+    
+            <div class="totNutrition" id="totNutrition">
+                <p>Macros: </p>
+            </div>
+            <div class="mealCount">
+                <p>Meals Added: <span id="mealCounter">0/3</span></p>
+            </div>
+        </div>
+    </section>
+    <div class="smallerBTN" id="smallerBTN">
+        <button class="smaller-add-meal-button" onclick="openMealSidebar()">+</button>
+    </div>
+
+    <div id="totalNutrition"></div>
+
+</body>
+<script src="js/plannerjava.js"></script>
+
+</html>
