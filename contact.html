@@ -18,7 +18,10 @@
     <!-- Contact form -->
     <div class="form-container">
         <h2>Contact Us</h2>
-        <form class="form" action="contact.php" method="post">
+        <!-- this api allows for free contact form email recieval without the need for JS/PHP-->
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key" value="dc163d4f-3455-46c6-8d2b-0eccb8003a6a">
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -44,6 +47,4 @@
     </div>
 
 </body>
-<script src="java.js"></script>
-
 </html>

@@ -19,12 +19,10 @@ window.addEventListener("scroll", function () {
 
     var logoImg = document.querySelector(".logo img");
 
-    // Calculate the scale factor based on the scroll position
     var scaleFactor = 1 - window.scrollY / 1000;
 
     scaleFactor = Math.max(0.9, scaleFactor);
 
-    // Apply the scale transformation to the logo image
     logoImg.style.transform = "scale(" + scaleFactor + ")";
 });
 
@@ -35,13 +33,11 @@ function searchRecipes() {
     const mealType = document.getElementById('meal-type').value;
     const dietType = document.getElementById('diet-type').value; // Change this to healthType
     let url = `https://api.edamam.com/search?q=${query}&app_id=${appId}&app_key=${appKey}`;
-
-    // Add meal type to the URL if selected
     if (mealType) {
         url += `&mealType=${mealType}`;
     }
 
-    // Add health type to the URL if selected
+    //add health type to the URL if selected
     if (dietType) {
         url += `&health=${dietType}`; // Change this to health
     }

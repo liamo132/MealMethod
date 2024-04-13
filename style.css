@@ -12,29 +12,22 @@
 
 
 /*---------------SCROLLBAR------------------*/
-/* Width */
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
     background: #ececec;
-    /* Use the background color from your CSS */
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
     background: #31C48D;
-    /* Use the color you want for the scrollbar handle */
     border-radius: 5px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #1f824d;
-    /* Use a slightly different shade or color on hover */
 }
 
 
@@ -53,7 +46,6 @@ header {
     z-index: 100000;
     background: #ececec;
     box-shadow: none;
-    /* Initially no shadow */
 }
 
 .logo img {
@@ -67,19 +59,19 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px; /* Adjust size of the circle */
-    height: 40px; /* Adjust size of the circle */
-    border: 2px solid #31C48D; /* Green border */
-    border-radius: 50%; /* Make it a circle */
-    margin-left: 20px; /* Adjust spacing */
+    width: 40px; 
+    height: 40px; 
+    border: 2px solid #31C48D; 
+    border-radius: 50%; 
+    margin-left: 20px; 
     color: #31C48D;
     text-decoration: none;
-    font-size: 24px; /* Adjust icon size */
-    transition: color 0.3s; /* Smooth transition */
+    font-size: 24px; 
+    transition: color 0.3s; 
 }
 
 .profile-logo:hover {
-    background-color: #F0F8FF; /* Light blue background on hover */
+    background-color: #F0F8FF; 
 }
 
 header ul {
@@ -108,14 +100,12 @@ header ul li a {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Hover effect */
 header ul li a:hover {
     background-color: #F0F8FF;
     border-color: #31C48D;
 
 }
 
-/* Active link */
 header ul li a.active {
     color: #fff;
     background-color: #31C48D;
@@ -123,7 +113,6 @@ header ul li a.active {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Centering all navigation links */
 header ul {
     flex: 1;
     display: flex;
@@ -159,12 +148,10 @@ header.sticky .logo img {
 
 .banner {
     position: relative;
-    /* Ensure the video covers the entire banner */
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    /* Hide any overflow */
-}
+    }
 
 .banner-video {
     position: absolute;
@@ -174,10 +161,8 @@ header.sticky .logo img {
     height: 100%;
     object-fit: cover;
     border: none;
-    /* Remove border */
     opacity: 0.89;
     filter: blur(0);
-    /* Initially no blur */
     transition: 0.8s;
 }
 
@@ -246,23 +231,16 @@ header.sticky .logo img {
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
     padding: 20px 50px;
-    /* Adjust padding to create more space from the sides */
     background-color: #ececec;
     min-height: 400px;
-    /* Set a minimum height */
     border-left: 20px solid #f8eeee;
-    /* Add white border to the left */
     border-right: 20px solid #f8eeee;
-    /* Add white border to the right */
     opacity: 0;
-    /* Initially hide the content */
     transition: opacity 0.5s ease-in-out;
-    /* Add transition effect */
 }
 
 .about-us.show {
     opacity: 1;
-    /* Show the content */
 }
 
 .about-us-content {
@@ -280,11 +258,8 @@ header.sticky .logo img {
     ;
     margin-bottom: 10px;
     opacity: 0;
-    /* Initially hide the heading */
     animation: fadeIn 0.8s ease forwards;
-    /* Apply fadeIn animation */
     animation-delay: 0.5s;
-    /* Delay the animation for 0.5s */
     padding-left: 9px;
 }
 
@@ -295,11 +270,8 @@ header.sticky .logo img {
     word-spacing: 0.8px;
     ;
     opacity: 0;
-    /* Initially hide the paragraphs */
     animation: fadeIn 0.8s ease forwards;
-    /* Apply fadeIn animation */
     animation-delay: 1.5s;
-    /* Delay the animation for 1s */
     font-family: 'Rubrik';
 }
 
@@ -318,9 +290,7 @@ header.sticky .logo img {
     ;
     display: flex;
     overflow: hidden;
-    /* Hide scrollbar */
     cursor: pointer;
-    /* Change cursor to pointer when hovering over carousel */
     margin-right: 50px;
 
 }
@@ -330,31 +300,24 @@ header.sticky .logo img {
     margin-right: 10px;
     border-radius: 10px;
     overflow: hidden;
-    /* Hide overflow to round corners */
     opacity: 0;
-    /* Initially hide the slide */
     transform: translateY(100px);
-    /* Initial translateY for slide animation */
     transition: opacity 0.5s ease, transform 0.5s ease;
-    /* Add transition effect */
 }
 
 .carousel-slide:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    /* Add shadow on hover for visual feedback */
 }
 
 .carousel-slide img {
     width: 100%;
     height: auto;
     transition: transform 1s;
-    /* Add smooth transition for image scaling */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-slide:hover img {
     transform: scale(1.05);
-    /* Scale up image on hover for visual effect */
 }
 
 .carousel-text {
@@ -387,15 +350,12 @@ header.sticky .logo img {
     text-align: center;
     opacity: 0;
     transform: translateY(-20px);
-    /* Initial position off-screen */
     transition: opacity 6s ease, transform 3s ease;
-    /* Transition both opacity and transform */
 }
 
 .footer-content.show {
     opacity: 1;
     transform: translateY(0);
-    /* Move content back to its original position */
 }
 
 .footer-content h3 {
@@ -405,7 +365,6 @@ header.sticky .logo img {
     font-family: 'Montserrat';
     margin-bottom: 18px;
     letter-spacing: 1px;
-    /* Increased letter spacing */
 }
 
 #email:hover {
@@ -431,7 +390,6 @@ header.sticky .logo img {
 
 .social-icon {
     color: #fff;
-    /* change social icon color */
     font-size: 30px;
     margin-right: 20px;
 }
@@ -451,7 +409,6 @@ header.sticky .logo img {
     padding: 15px 0;
     position: absolute;
     bottom: 0;
-    /* Align to the bottom */
     left: 0;
     width: 100%;
 }
@@ -465,18 +422,15 @@ header.sticky .logo img {
 
 #header2 {
     text-align: center;
-    /* Center the content horizontally */
 }
 
 #header2 .logo {
     margin: 0 auto;
-    /* Center the logo horizontally */
 }
 
 .form-container {
     width: 70%;
     max-width: 600px;
-    /* Maximum width to maintain readability */
     background: linear-gradient(#ececec, #d8d7d7) padding-box,
         linear-gradient(145deg, transparent 35%, #31C48D, #1f824d) border-box;
     border: 2px solid transparent;
@@ -493,7 +447,7 @@ header.sticky .logo img {
     background-size: 200% 100%;
     animation: gradient 5s ease infinite;
     margin: 170px auto;
-    /* Center the form */
+
 }
 
 
@@ -581,17 +535,17 @@ header.sticky .logo img {
 
 
 
-
+/*------------------------------------------ ACCOUNT SETTINGS PAGE----------------------------------------------*/
 
 .navigation {
     width: 200px;
     background-color: #ececec;
     height: 100%;
     position: fixed;
-    top: 86px; /* Adjusted top position */
+    top: 86px; 
     left: 0;
     overflow-y: auto;
-    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1); /* Add box shadow to the right */
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1); 
 }
 
 .navigation ul {
@@ -602,20 +556,20 @@ header.sticky .logo img {
 }
 
 .navigation li {
-    padding: 15px 20px; /* Increased padding for better spacing */
+    padding: 15px 20px; 
     border-bottom: 1px solid #ddd;
-    transition: background-color 0.3s; /* Smooth transition on hover */
+    transition: background-color 0.3s; 
    
 }
 
 .navigation .nav-item:hover {
-    background-color: #fff; /* Change the background color on hover */
+    background-color: #fff;
 }
 
 .navigation li a {
-    text-decoration: none; /* Remove default underline */
-    color: #333; /* Text color */
-    display: block; /* Make the entire area clickable */
+    text-decoration: none; 
+    color: #333; 
+    display: block; 
     font-family: 'Montserrat';
     font-weight: 600;
     padding-top: 25px;
@@ -626,38 +580,38 @@ header.sticky .logo img {
 
 .navigation li.active {
     background-color: #31C48D;
-    box-shadow: 5px 0 15px #31C48D; /* Add box shadow to the right */
+    box-shadow: 5px 0 15px #31C48D; 
 }
 
 .navigation li.active:hover {
-    background-color: #1f824d; /* Darker green color on hover */
+    background-color: #1f824d; 
 }
 
 .navigation .logout-button {
     text-decoration: none;
     color: white;
-    background-color: #FF5733; /* Red background color */
-    padding: 8px 16px; /* Decreased padding for smaller size */
-    border-radius: 5px; /* Border radius for rounded corners */
-    display: flex; /* Use flexbox */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    margin-top: 460px; /* Margin to separate it from the other links */
-    font-family: 'Montserrat'; /* Font family */
-    font-weight: bold; /* Bold font weight */
-    transition: background-color 0.3s; /* Smooth transition on hover */
-    font-size: 12px; /* Adjusted font size for smaller text */
+    background-color: #FF5733; 
+    padding: 8px 16px; 
+    border-radius: 5px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 460px; 
+    font-family: 'Montserrat'; 
+    font-weight: bold; 
+    transition: background-color 0.3s; 
+    font-size: 12px;
     bottom: 40;
 }
 
 .navigation .logout-button:hover {
-    background-color: #fa0e0e; /* No change on hover */
+    background-color: #fa0e0e; 
 }
 
 .navigation .logout-button:hover span {
-    color: white; /* Keep the text color white on hover */
+    color: white; 
 }
-/* New CSS for Name Inputs */
+
 .name-inputs {
     display: flex;
     justify-content: space-between;
@@ -665,50 +619,49 @@ header.sticky .logo img {
 }
 
 .name-inputs .input-wrapper {
-    flex: 0 0 48%; /* Adjust width as needed */
+    flex: 0 0 48%; 
 } 
 
 p.profile-picture {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    margin-bottom: 20px; /* Add margin for spacing */
+    justify-content: center; 
+    align-items: center; 
+    margin-bottom: 20px; 
 }
 
 .profile-picture-placeholder {
-    width: 70px; /* Adjust size as needed */
-    height: 70px; /* Adjust size as needed */
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
-    background-color: #ccc; /* Grey color */
+    background-color: #ccc; 
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    cursor: pointer; /* Add cursor on hover */
-    margin: auto; /* Center the circle */
+    cursor: pointer; 
+    margin: auto; 
 }
 
 .profile-picture-placeholder:hover {
-    background-color: #bbb; /* Change color on hover */
+    background-color: #bbb; 
 }
 
 .profile-picture-placeholder i {
-    color: #fff; /* White color for the camera icon */
-    font-size: 20px; /* Adjust size as needed */
+    color: #fff; 
+    font-size: 20px;
 }
 
 
 .content-section {
-    display: none; /* Hide all content sections initially */
+    display: none; 
 }
 
-/* Show active content section */
 .content-section.active {
     display: block;
 } 
 
 .content {
-    padding: 50px 20px 20px; /* Adjusted padding */
+    padding: 50px 20px 20px; 
     background-color: #ffffff;
     border-radius: 12px;
     text-align: center;
@@ -748,7 +701,7 @@ p.profile-picture {
     font-weight: 600;
     color: #31C48D;
     margin-bottom: 20px;
-    text-align: left; /* Align labels to the left */
+    text-align: left; 
 }
 
 /* Form inputs */
@@ -765,7 +718,7 @@ p.profile-picture {
     outline: none;
     font-size: 18px;
     font-family: "Nunito", sans-serif;
-    text-align: center; /* Align inputs to the center */
+    text-align: center; 
 }
 
 #accountDetailsForm textarea {
@@ -789,7 +742,7 @@ p.profile-picture {
 }
 
 #accountDetailsForm input[type="date"]::placeholder {
-    color: rgba(0, 0, 0, 0.3); /* Adjust transparency */
+    color: rgba(0, 0, 0, 0.3); 
 }
 #accountDetailsForm input[type="submit"]:hover {
     background-color: #45a049;
@@ -802,7 +755,7 @@ p.profile-picture {
     font-weight: 600;
     color: #31C48D;
     margin-bottom: 20px;
-    text-align: left; /* Align labels to the left */
+    text-align: left; 
 }
 
 /* Form inputs */
@@ -817,7 +770,7 @@ p.profile-picture {
     outline: none;
     font-size: 18px;
     font-family: "Nunito", sans-serif;
-    text-align: center; /* Align inputs to the center */
+    text-align: center; 
 }
 
 #userSpecificationsForm textarea {
@@ -829,17 +782,17 @@ p.profile-picture {
     margin: auto;
 }
 
-/* Form labels */
+
 #userSpecificationsForm label {
     display: block;
     font-size: 18px;
     font-weight: 600;
     color: #31C48D;
     margin-bottom: 20px;
-    text-align: left; /* Align labels to the left */
+    text-align: left; 
 }
 
-/* Form inputs wrapper */
+
 .input-group {
     display: flex;
     justify-content: space-between;
@@ -847,10 +800,9 @@ p.profile-picture {
 }
 
 .input-group .input-wrapper {
-    flex: 0 0 48%; /* Adjust width as needed */
+    flex: 0 0 48%; 
 }
 
-/* Form inputs */
 #userSpecificationsForm input[type="number"],
 #userSpecificationsForm select,
 #userSpecificationsForm textarea {
@@ -861,7 +813,7 @@ p.profile-picture {
     outline: none;
     font-size: 18px;
     font-family: "Nunito", sans-serif;
-    text-align: center; /* Align inputs to the center */
+    text-align: center; 
 }
 
 #userSpecificationsForm textarea {
@@ -891,25 +843,25 @@ p.profile-picture {
 .meal-plans-box {
     background-color: #ececec;
     padding: 30px;
-    margin: auto; /* Center horizontally */
+    margin: auto; 
     border-radius: 12px;
     height: 700px;
-    width: 100%; /* Set to 100% to ensure it fills the parent container */
-    max-width: 1600px; /* Adjust as needed */
+    width: 100%; 
+    max-width: 1600px; 
     border: 2px solid;
     border-color: #31C48D;
-    animation: border-animation 2s infinite alternate; /* Animation for border color */
+    animation: border-animation 2s infinite alternate; 
     margin-bottom: 35px;
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next row */
-    justify-content: space-around; /* Center items horizontally */
+    flex-wrap: wrap; 
+    justify-content: space-around;
 }
 
 .meal-plan {
-    width: 90%; /* Take 90% of the width */
-    background-color: #fff; /* Background color */
-    padding: 20px; /* Add padding */
-    border-radius: 12px; /* Add border radius */
+    width: 90%; 
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 12px; 
     height: 65px;
     border: 2px solid;
     border-color: #31C48D;
@@ -921,7 +873,7 @@ p.profile-picture {
 }
 
 .meal-name i {
-    margin-right: 10px; /* Add space between icon and text */
+    margin-right: 10px;
 }
 
 @keyframes border-animation {
@@ -929,7 +881,7 @@ p.profile-picture {
         border-color: #31C48D;
     }
     100% {
-        border-color: #1f824d; /* Darker green color */
+        border-color: #1f824d; 
     }
 }
 
@@ -938,11 +890,11 @@ p.profile-picture {
         border-color: #31C48D;
     }
     100% {
-        border-color: #1f824d; /* Darker green color */
+        border-color: #1f824d;
     }
 }
 
-/*---------------------------------------------------RECIPE SEATCH INDEX SYTLING---------------------------------------------------*/
+/*---------------------------------------------------RECIPE SEARCH INDEX SYTLING---------------------------------------------------*/
 
 
 .search-section {
@@ -964,14 +916,10 @@ p.profile-picture {
 
 .search-section p {
     font-family: 'Rubik', sans-serif;
-    /* Change font family */
     color: #31C48D;
-    /* Change text color */
     font-weight: bold;
     font-size: 16px;
-    /* Adjust font size */
     margin-bottom: 10px;
-    /* Add some bottom margin for spacing */
 }
 
 
@@ -1046,7 +994,6 @@ p.profile-picture {
     height: 200px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
-    /* Rounded corners only at the top */
 }
 
 .recipe-card-content {
@@ -1080,40 +1027,33 @@ p.profile-picture {
 .secondary-header {
     background-color: #fff;
     padding: 15px;
-    /* Increased padding */
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 85px;
-    /* Adjust this value as needed */
     width: 100%;
 
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-    /* Add box shadow */
 }
 
 .secondary-header .logo {
     display: none;
-    /* Hide the logo in the secondary header */
 }
 
 .secondary-header ul {
     display: none;
-    /* Hide the menu in the secondary header */
 }
 
 .header-left {
     display: flex;
     align-items: center;
-    /* Align buttons vertically */
     margin-left: 340px;
 }
 
 .header-right {
     display: flex;
     align-items: center;
-    /* Align buttons vertically */
     margin-right: 340px;
 }
 
@@ -1122,7 +1062,6 @@ p.profile-picture {
 .clearBtn,
 .saveBtn {
     background-color: #ddd;
-    /* Light gray background */
     border: none;
     cursor: pointer;
     margin-right: 20px;
@@ -1131,9 +1070,7 @@ p.profile-picture {
     font-weight: 600;
     letter-spacing: 1.2px;
     padding: 8px 12px;
-    /* Add padding */
     border-radius: 5px;
-    /* Add border radius */
 }
 
 .undoBtn:hover,
@@ -1141,7 +1078,6 @@ p.profile-picture {
 .clearBtn:hover,
 .saveBtn:hover {
     background-color: #ccc;
-    /* Darker gray background on hover */
 }
 
 
@@ -1149,11 +1085,9 @@ p.profile-picture {
 .redoBtn {
     color: #31C48D;
     border: 1px;
-    /* Remove default border */
     border-radius: 6px;
     padding: 8px 16px;
     position: relative;
-    /* Position for pseudo-element */
 }
 
 .undoBtn::before,
@@ -1171,7 +1105,6 @@ p.profile-picture {
     background-size: 200% 100%;
     background-position: 0 0, 100% 0;
     z-index: -1;
-    /* Ensure the pseudo-element is behind the content */
     transition: background-position 0.3s ease;
 }
 
@@ -1182,9 +1115,7 @@ p.profile-picture {
 
 .clearBtn {
     background-color: rgb(231, 85, 85);
-    /* Light gray background */
     color: #ececec;
-    /* Gray text color */
     border: none;
     cursor: pointer;
     margin-right: 20px;
@@ -1193,30 +1124,22 @@ p.profile-picture {
     font-weight: 600;
     letter-spacing: 1.2px;
     padding: 8px 12px;
-    /* Add padding */
     border-radius: 5px;
-    /* Add border radius */
     display: flex;
-    /* Make it a flex container */
     align-items: center;
-    /* Center icon vertically */
 }
 
 .clearBtn:hover {
     background-color: #ee1e1e;
-    /* Darker gray background on hover */
 }
 
 .clearBtn i {
     margin-right: 5px;
-    /* Add spacing between icon and text */
 }
 
 .saveBtn {
     background-color: #31C48D;
-    /* Green background */
     color: #ececec;
-    /* Light gray text color */
     border: none;
     cursor: pointer;
     margin-right: 20px;
@@ -1225,83 +1148,45 @@ p.profile-picture {
     font-weight: 600;
     letter-spacing: 1.2px;
     padding: 8px 12px;
-    /* Add padding */
     border-radius: 5px;
-    /* Add border radius */
     display: flex;
-    /* Make it a flex container */
     align-items: center;
-    /* Center icon vertically */
 }
 
 .saveBtn:hover {
     background-color: #1f824d;
-    /* Darker green background on hover */
 }
 
 .saveBtn i {
     margin-right: 5px;
-    /* Add spacing between icon and text */
 }
 
 .header-middle input {
     padding: 10px;
-    /* Increased padding */
     border: none;
-    /* Removed border */
     border-radius: 5px;
     width: 300px;
-    /* Increased width */
     transition: all 0.3s;
-    /* Added transition for smooth effect */
 }
 
 .header-middle input:focus {
     outline: none;
     border: 1px solid #ccc;
-    /* Add border when input is focused */
     width: 350px;
-    /* Increase width on focus */
-}
-
-
-.header-middle input {
-    padding: 10px;
-    /* Increased padding */
-    border: none;
-    /* Removed border */
-    border-radius: 5px;
-    width: 300px;
-    /* Increased width */
-    transition: all 0.5s;
-    /* Added transition for smooth effect */
-    text-align: center;
-    /* Center the text */
-}
-
-.header-middle input:focus {
-    outline: none;
-    border: 1px solid #ccc;
-    /* Add border when input is focused */
-    width: 350px;
-    /* Increase width on focus */
 }
 
 .header-middle input::placeholder {
     text-align: center;
-    /* Center the placeholder text */
 }
 
 .header-middle input {
     text-align: center;
-    /* Center the text entered by the user */
 }
 
 .hover-pointer:hover {
     cursor: pointer;
 }
 
-/* Add hover pointer for all day buttons */
 .day:hover {
     cursor: pointer;
 }
@@ -1610,12 +1495,9 @@ p.profile-picture {
 
 .closebtn:hover {
     transform: scale(1.1);
-    /* Add slight scaling effect on hover */
     color: #31C48D;
-    /* Ensure the color remains green on hover */
 }
 
-/* Style for the meal divs inside the meal container */
 .meal {
     margin-bottom: 5px;
     padding: 5px;
@@ -1624,7 +1506,6 @@ p.profile-picture {
     border-radius: 5px;
 }
 
-/* Style for the active meal option */
 .meal.active {
     background-color: #31C48D;
     color: #fff;
@@ -1648,23 +1529,17 @@ p.profile-picture {
 
 .breakfast-meal {
     background-color: #FFE57F;
-    /* Yellow background for breakfast */
     color: #333;
-    /* Text color for breakfast */
 }
 
 .lunch-meal {
     background-color: #7FB3D5;
-    /* Blue background for lunch */
     color: #fff;
-    /* Text color for lunch */
 }
 
 .dinner-meal {
     background-color: #FFB6C1;
-    /* Pink background for dinner */
-    color: #fff;
-    /* Text color for dinner */
+        color: #fff;
 }
 
 .smallerBTN {
@@ -1675,9 +1550,7 @@ p.profile-picture {
     transform: translateX(-50%);
     z-index: 999;
     width: 90%;
-    /* Adjust as needed */
     transition: bottom 0.5s ease;
-    /* Add transition effect */
 }
 
 .smaller-add-meal-button {
@@ -1685,7 +1558,6 @@ p.profile-picture {
     color: white;
     border: none;
     border-radius: 20px;
-    /* Adjust as needed */
     width: 40px;
     height: 40px;
     cursor: pointer;
@@ -1698,61 +1570,42 @@ p.profile-picture {
     left: 460px;
     width: 50%;
     padding: 10px;
-    /* Adjust padding as needed */
     background-color: #ececec;
     border: 2px solid #31C48D;
-    /* Add a border */
-    border-radius: 10px;
-    /* Add rounded corners */
+        border-radius: 10px;
     box-shadow: 0 2px 4px rgba(240, 236, 236, 0.801);
-    /* Add a shadow for depth */
     transition: width 0.5s ease;
-    /* Add transition effect for width */
     text-align: center;
-    /* Center-align the text */
 }
 
 .totNutrition p {
     margin: 0;
-    /* Remove default margin */
     font-size: 24px;
-    /* Adjust font size */
     font-weight: 600;
     color: #111;
-    /* Set text color */
     font-family: 'Montserrat';
     letter-spacing: .8px;
     color: #31C48D;
     text-align: center;
-    /* Center-align the text */
 }
-
-/* Media query for smaller screens */
 @media screen and (max-width: 768px) {
     .totNutrition {
         width: 80%;
-        /* Adjust width for smaller screens */
         left: 10%;
-        /* Adjust left position for center alignment */
     }
 }
 
 .mealCount {
     position: absolute;
     bottom: 20px;
-    /* Adjust position as needed */
     left: 400px;
-    /* Adjust position as needed */
     font-size: 18px;
-    /* Adjust font size */
     color: #111;
-    /* Set text color */
     font-family: 'Montserrat';
 }
 
 .mealCount p {
     margin: 0;
-    /* Remove default margin */
     font-family: 'Rubrik';
 }
 
@@ -1804,30 +1657,6 @@ p.profile-picture {
     color: #31C48D;
 }
 
-.recipe-details .delete-button {
-    margin-left: auto;
-    /* Push the button to the right */
-}
-
-.delete-button {
-    background-color: #1f824d;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-    height: 45px;
-    margin: auto;
-    transition: transform 0.3s ease;
-    /* Add transition for the shake effect */
-}
-
-/* Add hover effect */
-.delete-button:hover {
-    transform: translateX(-2px);
-    /* Apply a small shake effect on hover */
-    background-color: #31C48D;
-}
 
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
@@ -1838,20 +1667,17 @@ p.profile-picture {
 
     .totNutrition {
         width: 40%;
-        /* Adjusted width for smaller screens */
     }
 }
 
-/* Media query for even smaller screens */
+
 @media screen and (max-width: 480px) {
     .meal-container {
         width: 95%;
-        /* Further adjust width for very small screens */
     }
 
     .totNutrition {
         width: 30%;
-        /* Adjusted width for very small screens */
     }
 }
 
@@ -1883,7 +1709,7 @@ p.profile-picture {
 .left-side label,
 .left-side input,
 .left-side select {
-    width: 100%; /* Adjusted width */
+    width: 100%; 
     margin-bottom: 15px;
 }
 
@@ -1934,7 +1760,7 @@ p.profile-picture {
     margin-bottom: 20px;
 }
 .gender .text {
-    color: #31C48D; /* Change text color to forest green */
+    color: #31C48D; 
     margin: none;
 }
 
@@ -2013,7 +1839,6 @@ p.profile-picture {
     margin-bottom: 20px;
 }
 
-/* Style for Radio */
 .gender .container {
     display: block;
     position: relative;
@@ -2027,14 +1852,13 @@ p.profile-picture {
     user-select: none;
 }
 
-/* Hide the browser's default radio button */
 .gender .container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
 
-/* Create a custom radio button */
+
 .checkmark {
     position: absolute;
     top: 0;
@@ -2045,29 +1869,26 @@ p.profile-picture {
     border-radius: 50%;
 }
 
-/* On mouse-over, add a grey background color */
 .gender .container:hover input~.checkmark {
     background-color: #ccc;
 }
 
-/* When the radio button is checked, add a blue background */
 .gender .container input:checked~.checkmark {
     background-color: #31C48D;
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
+
 .checkmark:after {
     content: "";
     position: absolute;
     display: none;
 }
 
-/* Show the indicator (dot/circle) when checked */
+
 .gender .container input:checked~.checkmark:after {
     display: block;
 }
 
-/* Style the indicator (dot/circle) */
 .gender .container .checkmark:after {
     top: 9px;
     left: 9px;
@@ -2084,9 +1905,6 @@ p.profile-picture {
     justify-content: space-around;
     align-items: center;
 }
-
-
-
 
 
 @media (max-width: 700px) {
@@ -2120,26 +1938,25 @@ p.profile-picture {
     align-items: center;
 }
 
-/* Style the select element */
+
 .input select {
     padding: 10px;
-    border: 2px solid #31C48D; /* Improved border */
+    border: 2px solid #31C48D; 
     border-radius: 5px;
     width: 80%;
     font-size: 16px;
     background-color: #fff;
-    appearance: none; /* Removes default arrow icon */
-    outline: none; /* Removes outline when focused */
+    appearance: none; 
+    outline: none; 
 }
 
-/* Adjust appearance for better alignment */
+
 .input select option {
     padding: 10px;
 }
 
-/* Hover effect */
 .input select:hover {
-    border-color: #3158a3; /* Darker border color on hover */
+    border-color: #3158a3; 
 }
 
 .input select option {
@@ -2182,26 +1999,26 @@ p.profile-picture {
 #output {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
+    align-items: center;
+    justify-content: center; 
 }
 
 
 
 #pie-chart canvas {
-    max-width: 180px; /* Adjust maximum width of the canvas */
-    max-height: 180px; /* Adjust maximum height of the canvas */
+    max-width: 180px; 
+    max-height: 180px; 
 }
 
 .result-section {
-    opacity: 0; /* Initially hide all result sections */
-    transition: opacity 0.5s ease; /* Apply transition effect */
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
     margin-bottom: 20px;
     text-align: center;
 }
 
 .result-section.show {
-    opacity: 1; /* Show the result section */
+    opacity: 1; 
 }
 
 
@@ -2222,5 +2039,8 @@ p.profile-picture {
     font-size: 18px;
     font-weight: 500;
 }
+
+
+
 
 
