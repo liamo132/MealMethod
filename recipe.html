@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="icon"  type="image/x-icon" href="img/favicon.ico" >
-    
+
 </head>
 
 <body>
@@ -20,32 +20,26 @@
             <li><a href="mealplanner.html">Meal Planner</a></li>
             <li><a href="fitbuilder.html">Fit Builder</a></li>
         </ul>
-        <a href="account.html" class="profile-logo"><i class="fas fa-user"></i></a>
+        <a href="login.php" class="profile-logo"><i class="fas fa-user"></i></a>
     </header>
 
-        <!-- Profile Sidebar -->
-        <div id="profileSidebar" class="profile-sidebar">
-            <a href="#" class="close-btn" id="closeBtn">&times;</a>
-            <h2>Profile Options</h2>
-            <ul>
-                <li><a href="#">Profile Details</a></li>
-                <li><a href="#">Your Meal Plan</a></li>
-                <!-- Add more options here -->
-            </ul>
-        </div>
 
-<!--- search parameters -->
+
+<!--- search  -->
 <div class="search-section">
     <h2> Want a meal ? Use our method.</h2>
     <p> Use the search filters to find your perfect grub.</p>
     <div class="search-form">
         <input type="text" id="query" placeholder="Enter recipe keyword">
         <select id="meal-type">
+          <!-- Meal type options -->
             <option value="">Select Meal Type</option>
             <option value="breakfast">Breakfast</option>
             <option value="lunch">Brunch</option>
             <option value="dinner">Dinner</option>
         </select>
+
+        <!-- Options for diets -->
         <select id="diet-type">
             <option value="">Select Diet</option>
             <option value="vegetarian">Vegetarian</option>
@@ -58,7 +52,7 @@
             <option value="keto-friendly">Keto-Friendly</option>
             <option value="mediterranean">Mediterranean</option>
         </select>
-        
+
     </div>
     <button id="search-button" onclick="searchRecipes()">Search</button>
 </div>
